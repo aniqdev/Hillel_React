@@ -16,35 +16,35 @@
 
 	let container = document.getElementById('container');
 
-	let input1 = document.createElement('input');
+	let input1 = document.createElement('input'); // инпут для количества строк таблицы
 	input1.type = 'number';
-	input1.value = 5;
-	container.appendChild(input1);
+	input1.value = 5; // значение по умолчанию
+	container.appendChild(input1); // добавляем в контейнер
 
-	let input2 = document.createElement('input');
+	let input2 = document.createElement('input'); // инпут для количества столбцев таблицы
 	input2.type = 'number';
 	input2.value = 3;
 	container.appendChild(input2);
 
-	let button = document.createElement('input');
+	let button = document.createElement('input'); // кнопка для создания таблицы
 	button.type = 'button';
 	button.value = 'create table';
 	button.onclick = () => {
-		table.innerHTML = '';
+		table.innerHTML = ''; // очищаем таблицу
 		for (let i = 0; i < input1.value; i++) {
-			let tr = document.createElement('tr');
+			let tr = document.createElement('tr'); // создаем рядок
 			for (let j = 0; j < input2.value; j++) {
-				let td = document.createElement('td');
-				td._index = i+'-'+j;
+				let td = document.createElement('td'); // создаем ячейки
+				td._index = i+'-'+j; // сохранияем индекс как свойство объекса ячейки
 				td.onclick = (e) => { e.target.innerText = e.target._index }
-				tr.appendChild(td);
+				tr.appendChild(td); // добавляем яячейку в рядок
 			}
-			table.appendChild(tr);
+			table.appendChild(tr); // добавляем рядок в таблицу
 		}
 	}
-	container.appendChild(button);
+	container.appendChild(button); // добавляем кнупку в контейнер
 
-	let table = document.createElement('table');
-	container.appendChild(table);
+	let table = document.createElement('table'); // создаем таблицу
+	container.appendChild(table); // добавляем таблицу в контейнер
 
 </script>
