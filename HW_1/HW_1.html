@@ -14,38 +14,37 @@
 
 <script>
 
-let container = document.getElementById('container');
+	let container = document.getElementById('container');
 
-let input1 = document.createElement('input');
-input1.type = 'number';
-input1.value = 5;
-container.appendChild(input1);
+	let input1 = document.createElement('input');
+	input1.type = 'number';
+	input1.value = 5;
+	container.appendChild(input1);
 
-let input2 = document.createElement('input');
-input2.type = 'number';
-input2.value = 3;
-container.appendChild(input2);
+	let input2 = document.createElement('input');
+	input2.type = 'number';
+	input2.value = 3;
+	container.appendChild(input2);
 
-let button = document.createElement('input');
-button.type = 'button';
-button.value = 'create table';
-button.onclick = () => {
-	table.innerHTML = '';
-	for (let i = 0; i < input1.value; i++) {
-		let tr = document.createElement('tr');
-		for (let j = 0; j < input2.value; j++) {
-			let td = document.createElement('td');
-			td._index = i+'-'+j;
-			td.onclick = (e) => { e.target.innerText = e.target._index }
-			tr.appendChild(td);
+	let button = document.createElement('input');
+	button.type = 'button';
+	button.value = 'create table';
+	button.onclick = () => {
+		table.innerHTML = '';
+		for (let i = 0; i < input1.value; i++) {
+			let tr = document.createElement('tr');
+			for (let j = 0; j < input2.value; j++) {
+				let td = document.createElement('td');
+				td._index = i+'-'+j;
+				td.onclick = (e) => { e.target.innerText = e.target._index }
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
 		}
-		table.appendChild(tr);
 	}
-}
-container.appendChild(button);
+	container.appendChild(button);
 
-let table = document.createElement('table');
-container.appendChild(table);
-
+	let table = document.createElement('table');
+	container.appendChild(table);
 
 </script>
