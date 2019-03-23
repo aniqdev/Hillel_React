@@ -17,12 +17,12 @@
 }
 
 .like-wrapper_good {
-    color: #FF5722;
+    color: #405db2;
     margin-right: 30px;
 }
 
 .like-wrapper_bad {
-    color: #251111;
+    color: #cf5f5f;
 }
 
 .likes-quantity {
