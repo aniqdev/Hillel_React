@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styles from './Main-content.module.css';
-import SchoolList from './scool-list/school-list-component';
+import SchoolList from './scool-list/school-list-component.jsx';
 import constants from '../../constants';
 
 // const MainContent = (props) => {

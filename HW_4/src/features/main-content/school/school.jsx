@@ -9,6 +9,7 @@ class School extends Component {
     this.state = {
       likes: 0,
       dislikes: 0,
+      a:1
     }
   }
 

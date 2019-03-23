@@ -1,5 +1,5 @@
 import React from 'react';
-import School from '../school/school';
+import School from '../school/school.jsx';
 
 const SchoolList = (props) => {
   console.log('School - props - ', props);
