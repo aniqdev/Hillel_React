@@ -2,7 +2,7 @@ import React from 'react';
 import School from '../school/school.jsx';
 
 const SchoolList = (props) => {
-  console.log('School - props - ', props);
+  // console.log('School - props - ', props);
   const { title, studies, showMore } = props;
   // if (props.title) {
   //   return (

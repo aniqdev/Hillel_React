@@ -57,3 +57,13 @@ const constants = {
 };
 
 export default constants;
+
+
+
+export const BASE_URL_MOVIES = 'https://react-cdp-api.herokuapp.com';
+
+// const BEST_URL = {
+//   MOVIES : 'https://react-cdp-api.herokuapp.com/',
+// };
+
+// export BEST_URL;
