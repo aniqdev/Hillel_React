@@ -15,9 +15,11 @@ class School extends Component {
 
   doReaction(isLike){
     if(isLike){
-      this.setState({likes: ++this.state.likes});
+      let x = this.state.likes;
+      this.setState({likes: ++x});
     }else{
-      this.setState({dislikes: ++this.state.dislikes});
+      let x = this.state.dislikes;
+      this.setState({dislikes: ++x});
     }
   }
 
@@ -45,7 +47,7 @@ class School extends Component {
               btnClass={ btnClass + ' float-right' } >
               { isShowLess ? buttonShowDescription : buttonHideDescription  || 'X' }
             </Button>
-            <div className={ isShowLess ? 'hide' : 'show' + ' description-wrapper_text' } >
+            <div className={ (isShowLess ? 'hide' : 'show') + ' description-wrapper_text' } >
               { description }
             </div>
           </div>
