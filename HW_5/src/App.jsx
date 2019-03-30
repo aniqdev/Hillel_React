@@ -55,19 +55,19 @@ class App extends Component {
     console.log(e.target.id);
     let sorted;
     if(e.target.id === 'sort_by_title'){
-      sorted = this.state.movies.sort((a,b)=>{
+      sorted = [...this.state.movies].sort((a,b)=>{
         if (a.title > b.title) return 1;
         if (a.title < b.title) return -1;
         return 0;
       });
     }else if(e.target.id === 'sort_by_popularity'){
-      sorted = this.state.movies.sort((a,b)=>{
+      sorted = [...this.state.movies].sort((a,b)=>{
         if (a.vote_average > b.vote_average) return -1;
         if (a.vote_average < b.vote_average) return 1;
         return 0;
       });
     }else if(e.target.id === 'sort_by_release_date'){
-      sorted = this.state.movies.sort((a,b)=>{
+      sorted = [...this.state.movies].sort((a,b)=>{
         if (a.release_date > b.release_date) return 1;
         if (a.release_date < b.release_date) return -1;
         return 0;
