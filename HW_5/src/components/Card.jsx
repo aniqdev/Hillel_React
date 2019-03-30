@@ -12,11 +12,12 @@ class Card extends Component {
 
   render() {
       const m = this.props.movie;
+      const poster_path = m.poster_path ? 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+m.poster_path : 'http://dana-torg.com.ua/data/empty.gif';
     return (
 <div className="item poster card">
    <div className="image_content">
       <a id="movie_299537" className="result" href="/movie/299537" title="Captain Marvel" alt="Captain Marvel">
-         <img className="poster" data-sizes="auto" alt="Captain Marvel" sizes="185px" src={"https://image.tmdb.org/t/p/w185_and_h278_bestv2"+m.poster_path}/>
+         <img className="poster" data-sizes="auto" alt="Captain Marvel" sizes="185px" src={poster_path}/>
          <div className="meta" data-role="tooltip">
             <span id="popularity_544fec3c0e0a2601d8002462_value" className="hide popularity_rank_value">
                <div className="tooltip_popup popularity">
