@@ -35,16 +35,6 @@ class Header extends Component {
       .catch( alert );
 	}
 
-	getWeather = () => {
-		log('')
-		// if (this.state.weatherCity){
-		if (false){
-			// this.fetchWeather(this.state.weatherCity)
-		}else{
-			return <Autocomplete weatherCityChange={this.weatherCityChange}/>
-		}
-	}
-
   weatherCityChange = (weatherCity) => {
 		this.fetchWeather(weatherCity)
     this.setState({weatherCity: weatherCity});
@@ -55,7 +45,6 @@ class Header extends Component {
   }
 
 	render() {
-		const weather = this.getWeather();
 		return (
 <header className="normal">
 		<div className="content">
@@ -85,7 +74,7 @@ class Header extends Component {
 										 <a className="glyph new_icon no_click">
 												<span className="glyphicons glyphicons-pencil"></span>
 												<div className="rollover">
-													 {weather}
+													 <Autocomplete weatherCityChange={this.weatherCityChange}/>
 												</div>
 										 </a>
 									</div>
