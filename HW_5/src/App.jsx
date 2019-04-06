@@ -73,7 +73,7 @@ class App extends Component {
         return 0;
       });
     }
-          this.setState({movies: sorted});  
+          this.setState({movies: sorted});
    }
 
    componentDidMount(){
