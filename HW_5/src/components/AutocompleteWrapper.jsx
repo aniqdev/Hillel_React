@@ -1,8 +1,8 @@
 import React from 'react'
 import Autocomplete from 'react-autocomplete';
-import { getStates, fakeRequest } from './utils';
+import { getStates } from './utils';
 
-const log = console.log;
+// const log = console.log;
 
 export default class AutocompleteWrapper extends React.Component {
 

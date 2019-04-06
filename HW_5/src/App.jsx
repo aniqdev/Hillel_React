@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Header from './components/Header';
 import Main from './components/Main-content';
+import Footer from './components/Footer';
 
 // const log = console.log;
 
@@ -95,6 +96,9 @@ class App extends Component {
           onGetMovies={this.handleGetMovies}
           onInputChange={this.onInputChange}/>
         <Main movies={this.state.movies} resultTitle={this.state.resultTitle} onSort={this.handleSort}/>
+        <Footer>
+          <h3 style={{width: '100%'}}>Hello Footer!</h3>
+        </Footer>
       </React.Fragment>
     );
   }

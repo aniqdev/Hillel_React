@@ -1,24 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const log = console.log;
+// const log = console.log;
 
-class Card extends Component {
+const Weather = (props) => {
 
-   constructor(props) {
-     super(props);
-   
-     this.state = {};
-   }
-
-  render() {
-    if (!this.props.weather) return null
-    const w = this.props.weather;
+    if (!props.weather) return null
+    const w = props.weather;
     return (
       <div className="a" style={{color:'aqua'}}>
         {w.name + ', ' + (+w.main.temp - 273.15).toFixed(1)+'°C'}
       </div>
     );
-  }
 }
 
-export default Card;
+export default Weather;
