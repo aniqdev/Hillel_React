@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Card from './Card';
+import Card from '../Card/Card';
 // const log = console.log;
 
 class Main extends Component {

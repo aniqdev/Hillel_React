@@ -1,6 +1,6 @@
 import React from 'react'
 import Autocomplete from 'react-autocomplete';
-import { getStates, fakeRequest } from './utils';
+import { getStates, fakeRequest } from '../../utils';
 
 const log = console.log;
 

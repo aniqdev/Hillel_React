@@ -496,7 +496,7 @@ html.k-ie header ul li div.glyph_wrapper div.rollover,html.k-edge header ul li d
     top: 29px
 }
 
-header ul li div.glyph_wrapper:hover div.rollover {
+header ul li div.glyph_wrapper:hover div.rollover{
     animation: fadeIn 0.3s linear;
     visibility: visible
 }
@@ -895,7 +895,7 @@ div.slim_search_results p span {
 }
 
 footer {
-    height: 450px;
+    height: 50px;
     box-sizing: border-box;
     padding: 0;
     background-image: radial-gradient(at 30% top, #074034 0%, #081c24 70%);

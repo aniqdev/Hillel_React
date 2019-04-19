@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Header from './components/Header';
-import Main from './components/Main-content';
-import Footer from './components/Footer';
+import Header from '../Header/Header';
+import Main from '../Main-content/Main-content';
+import Footer from '../Footer/Footer';
 
 // const log = console.log;
 

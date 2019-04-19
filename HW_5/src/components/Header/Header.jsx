@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Weather from './Weather';
-import Autocomplete from './AutocompleteWrapper';
+import Weather from '../Weather/Weather';
+import Autocomplete from '../AutocompleteWrapper/AutocompleteWrapper';
 
 const log = console.log;
 
@@ -71,7 +71,7 @@ class Header extends Component {
 						<ul className="primary">
 							 <li>
 									<div className="glyph_wrapper">
-										 <a className="glyph new_icon no_click">
+										 <a className="glyph new_icon no_click" tabIndex="1">
 												<span className="glyphicons glyphicons-pencil"></span>
 												<div className="rollover">
 													 <Autocomplete weatherCityChange={this.weatherCityChange}/>

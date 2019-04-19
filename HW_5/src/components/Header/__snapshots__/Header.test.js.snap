@@ -94,6 +94,7 @@ ShallowWrapper {
                   >
                     <a
                       className="glyph new_icon no_click"
+                      tabIndex="1"
                     >
                       <span
                         className="glyphicons glyphicons-pencil"
@@ -308,6 +309,7 @@ ShallowWrapper {
                   >
                     <a
                       className="glyph new_icon no_click"
+                      tabIndex="1"
                     >
                       <span
                         className="glyphicons glyphicons-pencil"
@@ -417,6 +419,7 @@ ShallowWrapper {
                     >
                       <a
                         className="glyph new_icon no_click"
+                        tabIndex="1"
                       >
                         <span
                           className="glyphicons glyphicons-pencil"
@@ -719,6 +722,7 @@ ShallowWrapper {
                     >
                       <a
                         className="glyph new_icon no_click"
+                        tabIndex="1"
                       >
                         <span
                           className="glyphicons glyphicons-pencil"
@@ -769,6 +773,7 @@ ShallowWrapper {
                       >
                         <a
                           className="glyph new_icon no_click"
+                          tabIndex="1"
                         >
                           <span
                             className="glyphicons glyphicons-pencil"
@@ -815,6 +820,7 @@ ShallowWrapper {
                       >
                         <a
                           className="glyph new_icon no_click"
+                          tabIndex="1"
                         >
                           <span
                             className="glyphicons glyphicons-pencil"
@@ -837,6 +843,7 @@ ShallowWrapper {
                       "props": Object {
                         "children": <a
                           className="glyph new_icon no_click"
+                          tabIndex="1"
                         >
                           <span
                             className="glyphicons glyphicons-pencil"
@@ -870,6 +877,7 @@ ShallowWrapper {
                             </div>,
                           ],
                           "className": "glyph new_icon no_click",
+                          "tabIndex": "1",
                         },
                         "ref": null,
                         "rendered": Array [
@@ -1507,6 +1515,7 @@ ShallowWrapper {
                     >
                       <a
                         className="glyph new_icon no_click"
+                        tabIndex="1"
                       >
                         <span
                           className="glyphicons glyphicons-pencil"
@@ -1721,6 +1730,7 @@ ShallowWrapper {
                     >
                       <a
                         className="glyph new_icon no_click"
+                        tabIndex="1"
                       >
                         <span
                           className="glyphicons glyphicons-pencil"
@@ -1830,6 +1840,7 @@ ShallowWrapper {
                       >
                         <a
                           className="glyph new_icon no_click"
+                          tabIndex="1"
                         >
                           <span
                             className="glyphicons glyphicons-pencil"
@@ -2132,6 +2143,7 @@ ShallowWrapper {
                       >
                         <a
                           className="glyph new_icon no_click"
+                          tabIndex="1"
                         >
                           <span
                             className="glyphicons glyphicons-pencil"
@@ -2182,6 +2194,7 @@ ShallowWrapper {
                         >
                           <a
                             className="glyph new_icon no_click"
+                            tabIndex="1"
                           >
                             <span
                               className="glyphicons glyphicons-pencil"
@@ -2228,6 +2241,7 @@ ShallowWrapper {
                         >
                           <a
                             className="glyph new_icon no_click"
+                            tabIndex="1"
                           >
                             <span
                               className="glyphicons glyphicons-pencil"
@@ -2250,6 +2264,7 @@ ShallowWrapper {
                         "props": Object {
                           "children": <a
                             className="glyph new_icon no_click"
+                            tabIndex="1"
                           >
                             <span
                               className="glyphicons glyphicons-pencil"
@@ -2283,6 +2298,7 @@ ShallowWrapper {
                               </div>,
                             ],
                             "className": "glyph new_icon no_click",
+                            "tabIndex": "1",
                           },
                           "ref": null,
                           "rendered": Array [
