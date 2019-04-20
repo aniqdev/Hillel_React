@@ -25615,3 +25615,10 @@ a.k-grid-edit:hover,a.k-grid-delete:hover {
     color: #01d277;
 }
 
+.ReactModalPortal{
+    z-index: 1000;
+}
+
+.ReactModal__Overlay{
+    background-color: rgba(0, 0, 0, 0.6)!important;
+}

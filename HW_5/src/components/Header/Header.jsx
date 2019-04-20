@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import Weather from '../Weather/Weather';
 import Autocomplete from '../AutocompleteWrapper/AutocompleteWrapper';
+import Modal from 'react-modal';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)',
+    width                 : '40%',
+  }
+};
+
+// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement('#root')
 
 const log = console.log;
 
@@ -8,11 +24,25 @@ class Header extends Component {
 
 	constructor(props) {
 		super(props);
-	 log('Header construcor')
 		this.state = {
-      weatherCity: {"id":"4770","city_id":"709930","name":"Dnipropetrovsk","country":"UA","lon":"34.98333","lat":"48.450001"},
-			weather:false
+      		weatherCity: {"id":"4770","city_id":"709930","name":"Dnipropetrovsk","country":"UA","lon":"34.98333","lat":"48.450001"},
+			weather:false,
+      		modalIsOpen: false,
+      		modalTitle: 'Alert',
+      		modalText: 'I am a modal'
 		};
+	}
+
+	openModal = () => {
+		this.setState({modalIsOpen: true});
+	}
+
+	afterOpenModal = () => {
+		// references are now sync'd and can be accessed.
+	}
+
+	closeModal = () => {
+		this.setState({modalIsOpen: false});
 	}
 
 	fetchWeather = (weatherCity) => {
@@ -24,7 +54,6 @@ class Header extends Component {
 		weatherCity.name+','+
 		weatherCity.country.toLowerCase()+
 		'&APPID=dcdb07d3414938d4e03dce509552828d'
-		log(url)
 		fetch(url)
       .then(function(response) {
         return response.json();
@@ -32,21 +61,37 @@ class Header extends Component {
       .then((data) => {
         this.setState({weather: data});
       })
-      .catch( alert );
+      .catch((alert) => {
+		this.setState({modalIsOpen: true, modalTitle:'Weather API Error!',
+			modalText: alert.toString()});
+      });
 	}
 
-  weatherCityChange = (weatherCity) => {
+	weatherCityChange = (weatherCity) => {
 		this.fetchWeather(weatherCity)
-    this.setState({weatherCity: weatherCity});
-  }
+		this.setState({weatherCity: weatherCity});
+	}
 
-  componentDidMount(){
+    componentDidMount(){
 		if(this.state.weatherCity) this.fetchWeather(this.state.weatherCity)
-  }
+    }
 
 	render() {
 		return (
 <header className="normal">
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <h2>{this.state.modalTitle}</h2>
+          <div>{this.state.modalText}</div>
+          <div className="flex"><br/>
+		      <input onClick={this.closeModal} className="k-button k-primary" type="submit" value="close"/>
+		  </div>
+        </Modal>
 		<div className="content">
 			<div className="sub_media">
 				 <div className="left">
@@ -79,8 +124,8 @@ class Header extends Component {
 										 </a>
 									</div>
 							 </li>
-							 <li className="translate" style={{display:'none'}}>
-									<div>en</div>
+							 <li className="translate" style={{display:'nonen'}}>
+									<div onClick={this.openModal}>m</div>
 							 </li>
 							 <li><Weather weather={this.state.weather}/></li>
 						</ul>
@@ -92,7 +137,7 @@ class Header extends Component {
 				 <div className="sub_media">
 						<form onSubmit={this.props.onGetMovies} id="search_form" action="/search" method="get">
 							<span tabIndex="-1" role="presentation" className="k-widget k-autocomplete k-header k-autocomplete-clearable k-state-default">
-								<input onChange={this.props.onInputChange} dir="auto" type="text" tabIndex="0" autoComplete="off" placeholder="Search for a movie, tv show, person..." className="k-input" role="textbox"/>
+								<input onChange={this.props.onInputChange} dir="auto" type="text" tabIndex="0" autoComplete="off" placeholder="Search for a movie, tv show, person..." className="k-input"/>
 								<span unselectable="on" className="k-icon k-clear-value k-i-close k-hidden" title="clear" role="button" tabIndex="-1"></span>
 								<span className="k-icon k-i-loading" style={{display:'none'}}></span>
 							</span>
