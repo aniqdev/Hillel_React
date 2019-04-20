@@ -1,0 +1,4 @@
+export const IS_OPEN_PANEL_INFO = 'IS_OPEN_PANEL_INFO';
+export const GET_MOVIE_LIST = 'GET_MOVIE_LIST';
+export const GET_MOVIE_SUCCESS = 'GET_MOVIE_SUCCESS';
+export const GET_MOVIE_ERROR = 'GET_MOVIE_ERROR';
